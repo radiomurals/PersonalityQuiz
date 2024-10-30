@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="disclaimer-modal" class="modal">
+    <div class="modal-content">
+        <h2>Disclaimer</h2>
+        <p>
+            Please read this before taking.
+
+            There are no incorrect answers within this quiz. We ask you to be 100%
+            honest with yourself. You are allowed to be fully anonymous if that is
+            what you choose. If later on you choose to be anonymous, all previous 
+            history you have given us of your name will be automatically deleted. We
+            are not professionals, so results may not be fully accurate. You have 15 
+            minutes to complete this quiz. Remember, 1 is equal to least likely, and
+            5 is equal to most likely. If you have any questions, please do not 
+            hesitate to ask Kevin, Bella, or Selam.
+        </p>
+        <button id="agree-button">I Agree</button>
+    </div>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introversion vs. Extroversion Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Introversion vs. Extroversion Quiz</h1>
+    <div id="quiz-container">
+        <!-- Display the question here -->
+        <div id="question"></div>
+        <!-- Display answer options here -->
+        <div id="options"></div>
+        <!-- Next question button -->
+        <button onclick="selectAnswer()">Next</button>
+    </div>
+
+    <!-- Black-screen modal for anonymity prompt -->
+    <div id="anonymous-modal" class="modal">
+        <div class="modal-content">
+            <h2>Would you like to remain anonymous?</h2>
+            <button onclick="chooseAnonymous(true)">Yes</button>
+            <button onclick="chooseAnonymous(false)">No</button>
+            <div id="name-input" style="display: none;">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" placeholder="Your name">
+                <button onclick="saveName()">Submit Name</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+
+
+</html>
